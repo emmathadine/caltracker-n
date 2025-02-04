@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/night_bg"
+    tools:context=".MealDetail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/circular"
+            android:text="meal name"
+            android:textColor="@color/white"
+            android:textSize="45dp" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="#68A1EF"
+            android:fontFamily="@font/circular"
+            android:text="Return To Menu"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/blankcard">
+
+            <ImageView
+                android:id="@+id/foodimg"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                app:layout_constraintVertical_bias="0"
+                android:backgroundTint="#EBF2FD"
+                android:src="@drawable/night_bg"/>
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:id="@+id/content"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/blankcard">
+
+            <TextView
+                android:id="@+id/dailytitle"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularst"
+                android:text="this meal contains..."
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/nutritioninfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/blankcard"
+                android:backgroundTint="#EBF2FD"
+                android:fontFamily="@font/helveticarb"
+                android:text="nutrients will appear here!"
+                android:padding="10dp"
+                android:textColor="#121AD0"
+                android:textSize="16dp" />
+
+
+            <RadioGroup
+                android:id="@+id/radbut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/bfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:fontFamily="@font/helveticarb"
+                    android:text="B.FAST"
+                    android:textSize="11dp" />
+
+                <RadioButton
+                    android:id="@+id/lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:text="LUNCH"
+                    android:fontFamily="@font/helveticarb"
+                    android:textSize="11dp" />
+
+                <RadioButton
+                    android:id="@+id/dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:text="DINNER"
+                    android:fontFamily="@font/helveticarb"
+                    android:textSize="11dp" />
+
+                <RadioButton
+                    android:id="@+id/snack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:text="SNACK"
+                    android:fontFamily="@font/helveticarb"
+                    android:textSize="11dp" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/morning_bg"
+    tools:context=".LogMeal">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="@font/circular"
+        android:text="log a meal"
+        android:textColor="@color/white"
+        android:textSize="45dp"
+        app:layout_constraintBottom_toTopOf="@id/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/helveticarb"
+        android:text="what did you just have?"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintVertical_bias="0" />
+
+
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:orientation="vertical"
+        android:background="@drawable/blankcard"
+        app:layout_constraintVertical_bias="0">
+
+      <FrameLayout
+          android:id="@+id/searchframe"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:id="@+id/searchmenu">
+
+          <TextView
+              android:id="@+id/dailytitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="25dp"
+              android:fontFamily="@font/circularst"
+              android:text="Fill in Meal Details..."
+              android:textSize="25dp"
+              android:layout_gravity="center_horizontal"
+              />
+
+
+          <EditText
+              android:id="@+id/namecheck"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="15dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="15dp"
+              android:background="@drawable/blankcard"
+              android:backgroundTint="#68A1EF"
+              android:fontFamily="@font/helveticarb"
+              android:gravity="center"
+              android:hint="Enter the name of your meal here!"
+              android:padding="10dp"
+              android:textColor="@color/white"
+              android:textColorHint="#121AD0"
+              android:textSize="16dp" />
+
+          <EditText
+              android:id="@+id/portioncheck"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="15dp"
+              android:layout_marginTop="12dp"
+              android:layout_marginEnd="15dp"
+              android:background="@drawable/blankcard"
+              android:backgroundTint="#68A1EF"
+              android:fontFamily="@font/helveticarb"
+              android:gravity="center"
+              android:hint="Enter portion size (with unit) here!"
+              android:padding="10dp"
+              android:textColor="@color/white"
+              android:textColorHint="#121AD0"
+              android:textSize="16dp" />
+
+          <RadioGroup
+              android:id="@+id/typesel"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="15dp"
+              android:layout_marginEnd="15dp"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="20dp"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/bfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#68A1EF"
+                android:fontFamily="@font/helveticarb"
+                android:text="B.FAST"
+                android:textSize="11dp" />
+
+            <RadioButton
+                android:id="@+id/lunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#68A1EF"
+                android:text="LUNCH"
+                android:fontFamily="@font/helveticarb"
+                android:textSize="11dp" />
+
+            <RadioButton
+                android:id="@+id/dinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#68A1EF"
+                android:text="DINNER"
+                android:fontFamily="@font/helveticarb"
+                android:textSize="11dp" />
+
+            <RadioButton
+                android:id="@+id/snack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="#68A1EF"
+                android:text="SNACK"
+                android:fontFamily="@font/helveticarb"
+                android:textSize="11dp" />
+          </RadioGroup>
+
+
+        </LinearLayout>
+
+      </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#68A1EF"
+        android:fontFamily="@font/circular"
+        android:text="Search For Meal"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+  </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

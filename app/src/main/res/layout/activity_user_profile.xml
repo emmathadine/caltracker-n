@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/late_night_bg"
+    tools:context=".UserProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/circular"
+            android:text="user data"
+            android:textColor="@color/white"
+            android:textSize="45dp"
+            app:layout_constraintBottom_toTopOf="@id/menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="25dp"
+            android:background="@drawable/blankcard">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="15dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/kcal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/circularst"
+                    android:hint="enter new goal..."
+                    android:text="calories goal:"
+                    android:textSize="25dp" />
+
+                <EditText
+                    android:id="@+id/goal"
+                    android:inputType="number|numberDecimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/circularst"
+                    android:hint="enter new goal..."
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/updategoal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="#EDE1DE"
+                android:fontFamily="@font/helveticarb"
+                android:gravity="center"
+                android:text="change calories goal"
+                android:padding="10dp"
+                android:textColor="#222F3D"
+                android:textSize="16dp" />
+
+
+            <Button
+                android:id="@+id/wipedata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="25dp"
+                android:backgroundTint="#EDE1DE"
+                android:fontFamily="@font/helveticarb"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="wipe all data"
+                android:textColor="#222F3D"
+                android:textSize="16dp"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="#8C8380"
+            android:fontFamily="@font/circular"
+            android:text="Return To Menu"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

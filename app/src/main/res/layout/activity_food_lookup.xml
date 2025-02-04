@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/afternoon_bg"
+    tools:context=".FoodLookup">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/circular"
+            android:text="nutrition information"
+            android:textColor="@color/white"
+            android:textSize="45dp"
+            app:layout_constraintBottom_toTopOf="@id/menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/blankcard">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/menuframe">
+
+                <LinearLayout
+                    android:id="@+id/lookupresult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/foodimg"
+                android:gravity="center"
+                android:fontFamily="@font/circularst"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="15dp"
+                app:layout_constraintVertical_bias="0"
+                android:src="@drawable/pickimagebg"/>
+
+            <TextView
+                android:id="@+id/dailytitle"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/circularst"
+                android:text="this meal contains..."
+                android:textSize="25dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/cal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#121AD0"
+                                android:fontFamily="@font/helveticarb"
+                                android:text="Calories (cal):"
+                                android:padding="10dp"
+                                android:textColor="#EBF2FD"
+                                android:textSize="16dp"/>
+
+                            <EditText
+                                android:id="@+id/calinput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#EBF2FD"
+                                android:fontFamily="@font/helveticarb"
+                                android:gravity="center"
+                                android:hint="cals here!"
+                                android:padding="10dp"
+                                android:textColor="#121AD0"
+                                android:textColorHint="#121AD0"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/psize"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#121AD0"
+                                android:fontFamily="@font/helveticarb"
+                                android:text="Portion (g):"
+                                android:padding="10dp"
+                                android:textColor="#EBF2FD"
+                                android:textSize="16dp"/>
+
+                            <EditText
+                                android:id="@+id/psizeinput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#EBF2FD"
+                                android:fontFamily="@font/helveticarb"
+                                android:gravity="center"
+                                android:hint="serving here!"
+                                android:padding="10dp"
+                                android:textColor="#121AD0"
+                                android:textColorHint="#121AD0"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/carb"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#121AD0"
+                                android:fontFamily="@font/helveticarb"
+                                android:text="Carbs (g):"
+                                android:padding="10dp"
+                                android:textColor="#EBF2FD"
+                                android:textSize="16dp"/>
+
+                            <EditText
+                                android:id="@+id/carbinput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#EBF2FD"
+                                android:fontFamily="@font/helveticarb"
+                                android:gravity="center"
+                                android:hint="carbs here!"
+                                android:padding="10dp"
+                                android:textColor="#121AD0"
+                                android:textColorHint="#121AD0"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/proteins"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#121AD0"
+                                android:fontFamily="@font/helveticarb"
+                                android:text="Proteins (g):"
+                                android:padding="10dp"
+                                android:textColor="#EBF2FD"
+                                android:textSize="16dp"/>
+
+                            <EditText
+                                android:id="@+id/protinput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#EBF2FD"
+                                android:fontFamily="@font/helveticarb"
+                                android:gravity="center"
+                                android:hint="proteins here!"
+                                android:padding="10dp"
+                                android:textColor="#121AD0"
+                                android:textColorHint="#121AD0"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/fats"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#121AD0"
+                                android:fontFamily="@font/helveticarb"
+                                android:text="Fats (g):"
+                                android:padding="10dp"
+                                android:textColor="#EBF2FD"
+                                android:textSize="16dp"/>
+
+                            <EditText
+                                android:id="@+id/fatinput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="15dp"
+                                android:background="@drawable/blankcard"
+                                android:backgroundTint="#EBF2FD"
+                                android:fontFamily="@font/helveticarb"
+                                android:gravity="center"
+                                android:hint="fats here!"
+                                android:padding="10dp"
+                                android:textColor="#121AD0"
+                                android:textColorHint="#121AD0"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <RadioGroup
+                android:id="@+id/typesel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/bfast"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:fontFamily="@font/helveticarb"
+                    android:text="B.FAST"
+                    android:textSize="11dp" />
+
+                <RadioButton
+                    android:id="@+id/lunch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:text="LUNCH"
+                    android:fontFamily="@font/helveticarb"
+                    android:textSize="11dp" />
+
+                <RadioButton
+                    android:id="@+id/dinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:text="DINNER"
+                    android:fontFamily="@font/helveticarb"
+                    android:textSize="11dp" />
+
+                <RadioButton
+                    android:id="@+id/snack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#68A1EF"
+                    android:text="SNACK"
+                    android:fontFamily="@font/helveticarb"
+                    android:textSize="11dp" />
+            </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="#68A1EF"
+            android:fontFamily="@font/circular"
+            android:text="Save Meal"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

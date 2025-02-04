@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="120dp"
+    android:layout_height="150dp"
+    app:cardBackgroundColor="#FBFBFB"
+    app:cardCornerRadius="8dp"
+    android:layout_marginEnd="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/foodimg"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="70dp"
+            android:contentDescription="food image"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:padding="5dp"
+            android:foregroundTint="#FF8053"
+            android:src="@drawable/ic_food" />
+
+        <TextView
+            android:id="@+id/foodname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hamburgers"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:lines="1"
+            android:singleLine="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/circularst"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fooddata"
+            android:textStyle="bold"
+            android:textColor="#9990F9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B.FAST\n0 KCAL"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:lines="2"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/helveticarb"
+            android:textSize="10dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
